@@ -16,6 +16,8 @@ body {
   left: 50%;
   }
   #card {
+    background: radial-gradient(
+      circle at 50% 0%, orange 36%, #ffffff 35%);
     width: 100%;
     padding: 30px 20px;
     
