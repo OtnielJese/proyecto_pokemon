@@ -4,8 +4,7 @@ const btn = document.getElementById("btn");
 
 let getPokeData = () => {
   let id = Math.floor(Math.random() * 150) + 1;
-console.log(id)
-}
+  console.log("id GENERADO: " + id);
+};
 btn.addEventListener("click", getPokeData);
-
-
+git
