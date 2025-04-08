@@ -7,4 +7,3 @@ let getPokeData = () => {
   console.log("id GENERADO: " + id);
 };
 btn.addEventListener("click", getPokeData);
-git
