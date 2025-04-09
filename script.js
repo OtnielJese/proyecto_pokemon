@@ -4,6 +4,14 @@ const btn = document.getElementById("btn");
 
 let getPokeData = () => {
   let id = Math.floor(Math.random() * 150) + 1;
-  console.log("id GENERADO: " + id);
+  const finalUrl = url + id;
+  
+fetch(finalUrl)
+.then((response) => response.json()).
+.then((data) => { 
+  generateCard(data); 
+});
+
 };
 btn.addEventListener("click", getPokeData);
+window-addEventListener("load", getPokeData);
