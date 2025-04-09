@@ -38,7 +38,7 @@ let generateCard = (data) => {
   console.log(data);
   const hp = data.stats[0].base_stat;
   const imgSrc = data.sprites.other.dream_world.front_default;
-  const pokeName = data.name;
+  const pokeName = data.name[0].toUpperCase() + data.name.slice(1);
   const statAttack = data.stats[1].base_stat;
   const statDefense = data.stats[2].base_stat;
   const statSpeed = data.stats[5].base_stat;
@@ -80,7 +80,7 @@ appendTypes(data.types);
   styleCard(themeColor);     
 };
 let appendTypes = (types) => {
-  console.log(types);
+  console.log("types", types);
   types.forEach((item) => {
     let span = document.createElement("span");
     span.textContent = item.type.name;
@@ -88,7 +88,9 @@ let appendTypes = (types) => {
   });
 }
 let styleCard = (color) => {
-  card.style.background = `radial-gradient)circle at 50% 0%, ${color} 36%, #ffffff 36%)`;
+  console.log("Current theme color:", color);
+   card.style.background = `radial-gradient(circle at 50% 0%, ${color} 36%, #ffffff 36%)`;
+   card.querySelectorAll(".types.span").forEach(typeColor => { typeColor.style.BackgroundColor = Color})
 
 };
 
