@@ -19,7 +19,6 @@ body {
   -o-transform: translate(-50%, -50%);
 }
 #card {
-  background: radial-gradient(circle at 50% 0%, orange 36%, #ffffff 36%);
   width: 100%;
   padding: 30px 20px;
   border-radius: 10px;
@@ -30,10 +29,11 @@ body {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-/* imagen de pokmon */
-.img-poke {
+#card img{
   width: 300px;
   height: 300px;
+  max-width: 300px;
+  max-height: 300px;
 }
 .hp {
   width: 80px;
@@ -57,9 +57,8 @@ body {
     font-size: 12px;
     letter-spacing: 0.4px;
     font-weight: 600;
-  }
-  .types span{
-
+    border-radius: 20px;
+    color: #ffffff;
   }
   .stats {
     display: flex;
